@@ -4,14 +4,14 @@ const expect = chai.expect
 const plugiator = require('plugiator')
 
 const Remi = require('remi')
-const realm = require('../')
+const realm = require('..')
 
 describe('realm', function() {
   it('should path realm property', function() {
     let app = {}
 
     let remi = new Remi({
-      extensions: [realm],
+      extensions: [{ extension: realm }],
     })
     return remi.register(app, [
       {

@@ -24,7 +24,7 @@ const Remi = require('remi')
 const remiRealm = require('remi-realm')
 
 let remi = new Remi({
-  extensions: [remiRealm],
+  extensions: [{ exptension: remiRealm }],
 })
 ```
 
