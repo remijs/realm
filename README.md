@@ -20,12 +20,12 @@ npm i remi-realm
 Registering the extension
 
 ```js
-const Remi = require('remi')
+const remi = require('remi')
 const remiRealm = require('remi-realm')
 
-let remi = new Remi({
-  extensions: [{ exptension: remiRealm }],
-})
+let app = {}
+let registrator = remi(app)
+registrator.hook(remiRealm())
 ```
 
 

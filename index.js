@@ -1,15 +1,13 @@
 'use strict'
-const merge = require('merge')
-
-module.exports = function(remi, opts) {
-  remi.pre('createPlugin', function(next, target, plugin) {
+module.exports = function() {
+  return (next, target, plugin, cb) => {
     let realm = {
       plugin: plugin.name,
-      pluginOptions: target.registrations[plugin.name].options,
+      pluginOptions: plugin.options,
     }
 
-    next(merge(target, {
+    next(Object.assign(target, {
       realm,
-    }), plugin)
-  })
+    }), plugin, cb)
+  }
 }

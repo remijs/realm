@@ -3,23 +3,24 @@ const chai = require('chai')
 const expect = chai.expect
 const plugiator = require('plugiator')
 
-const Remi = require('remi')
+const remi = require('remi')
 const realm = require('..')
 
 describe('realm', function() {
   it('should path realm property', function() {
     let app = {}
 
-    let remi = new Remi({
-      extensions: [{ extension: realm }],
-    })
-    return remi.register(app, [
+    let registrator = remi(app)
+    registrator.hook(realm())
+
+    return registrator.register([
       {
-        register: plugiator.create('plugin1', (app, options) => {
+        register: plugiator.create('plugin1', (app, options, next) => {
           expect(app.realm.plugin).to.eq('plugin1')
           expect(app.realm.pluginOptions.foo).to.eq(1)
+          next()
         }),
-        options: {foo: 1},
+        options: { foo: 1 },
       },
     ])
   })
