@@ -8,9 +8,9 @@ const realm = require('..')
 
 describe('realm', function() {
   it('should path realm property', function() {
-    let app = {}
+    const app = {}
 
-    let registrator = remi(app)
+    const registrator = remi(app)
     registrator.hook(realm())
 
     return registrator.register([
