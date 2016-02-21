@@ -23,12 +23,12 @@ Registering the extension
 const remi = require('remi')
 const remiRealm = require('remi-realm')
 
-let app = {}
-let registrator = remi(app)
+const app = {}
+const registrator = remi(app)
 registrator.hook(remiRealm())
 ```
 
 
 ## License
 
-MIT © [Zoltan Kochan](https://github.com/zkochan)
+MIT © [Zoltan Kochan](https://www.kochan.io)
