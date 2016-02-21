@@ -1,6 +1,6 @@
 {
   "name": "remi-realm",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A remi extension that adds realm to the plugins",
   "main": "index.js",
   "scripts": {
