@@ -1,5 +1,7 @@
 # remi-realm
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/remijs/remi-realm.svg)](https://greenkeeper.io/)
+
 A remi extension that adds realm to the plugins
 
 [![Dependency Status](https://david-dm.org/remijs/remi-realm/status.svg?style=flat)](https://david-dm.org/remijs/remi-realm)

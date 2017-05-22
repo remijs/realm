@@ -38,9 +38,9 @@
     "chai": "^3.4.1",
     "coveralls": "^2.11.6",
     "istanbul": "^0.4.2",
-    "mocha": "^2.3.4",
-    "plugiator": "^0.1.1",
-    "remi": "1.x.x"
+    "mocha": "^3.4.1",
+    "plugiator": "^0.2.1",
+    "remi": "^2.0.1"
   },
   "dependencies": {}
 }
